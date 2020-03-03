@@ -67,7 +67,7 @@
         }
 
         .bgsuccess {
-            background-color: rgb(40, 167, 69);
+            background-color: rgb(80, 20, 80);
         }
 
         .w-100 {
@@ -114,7 +114,7 @@
 
         @media only screen and (max-width: 600px) {
             .bgsuccess {
-                background-color: lightblue;
+               
             }
 
             .d_result {
@@ -139,7 +139,7 @@
 
         }
     </style>
-    <div class="bgsuccess dflex-col jcs  aic" style="height:100vh;background:green">
+    <div class="bgsuccess dflex-col jcs  aic" style="height:100vh">
         <div class="d_result mt-5 dflex-col jcc aic">
             <div id="result">0 </div>
             <div>words / min </div>
@@ -187,7 +187,7 @@
                 index = txt_len
                 sng_txt = document.getElementsByClassName("sng_txt")
                 if (txt[index] == str[index]) {
-                    sng_txt[index].style.color = 'blue'
+                    sng_txt[index].style.color = 'rgba(200,200,200,0.5)'
                 }
                 else {
                     sng_txt[index].style.color = 'red'
