@@ -1,0 +1,209 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
+    <title>Type Speed</title>
+</head>
+
+<body>
+    <style>
+        * {
+            margin: 0;
+            color: white;
+            font-family: Arial, Helvetica, sans-serif;
+            user-select: none;
+            box-sizing: border-box;
+        }
+
+        #display_str {
+            font-size: 30px;
+            font-weight: bold;
+        }
+
+        .wrong {
+            color: red
+        }
+
+        .d_result {
+            width: 200px;
+            height: 200px;
+            background: rgba(0, 0, 0, 0.5);
+            font-weight: bold;
+            border-radius: 50%;
+            font-size: 20px;
+            color: wheat;
+            text-align: center;
+            box-sizing: content-box;
+        }
+
+        .d_result #result {
+            font-size: 80px;
+        }
+
+        .dflex {
+            display: flex;
+        }
+
+        .dflex-col {
+            display: flex;
+            flex-direction: column;
+        }
+
+        .jcc {
+            justify-content: center;
+        }
+
+        .jcs {
+            justify-content: start;
+        }
+
+        .aic {
+            align-items: center;
+        }
+
+        .p5 {
+            padding: 30px;
+        }
+
+        .bgsuccess {
+            background-color: rgb(40, 167, 69);
+        }
+
+        .w-100 {
+            width: 100%;
+        }
+
+        .w-50 {
+            width: 50%;
+        }
+
+        #typing_field {
+            padding: 15px;
+            color: black;
+            font-size: 20px;
+            border-radius: 1px;
+            outline: none;
+        }
+
+        .mt-5 {
+            margin-top: 25px;
+        }
+
+        .btn {
+            color: white;
+            padding: 10px 20px;
+            background-color: rgba(0, 0, 0, 0.5);
+            border: 0px;
+            outline: none;
+            border: 0px solid black;
+        }
+
+        .btn_style {
+            position: relative;
+            width: 60%;
+            height: 80px
+        }
+
+        .btn:hover {
+            background-color: white;
+            transition: 0.5s;
+            color: black;
+            cursor: pointer;
+        }
+
+        @media only screen and (max-width: 600px) {
+            .bgsuccess {
+                background-color: lightblue;
+            }
+
+            .d_result {
+                width: 150px;
+                height: 150px;
+                font-size: 15px;
+            }
+
+            .d_result #result {
+                font-size: 50px;
+            }
+
+            #display_str {
+                font-size: 20px;
+                font-weight: bold;
+                text-align: center;
+            }
+
+            .btn_style {
+                width: 100%;
+            }
+
+        }
+    </style>
+    <div class="bgsuccess dflex-col jcs  aic" style="height:100vh;background:green">
+        <div class="d_result mt-5 dflex-col jcc aic">
+            <div id="result">0 </div>
+            <div>words / min </div>
+        </div>
+        <div class="p5" id="display_str">
+            <div id="display_str1"></div>
+        </div>
+        <div class="btn_style" style="">
+            <input style="width: 100%;position:absolute" autofocus id="typing_field" style="flex:1;"
+                placeholder="Type here.. .">
+        </div>
+        <div> <button class="mt-5 btn" onclick="location.reload();">Refresh</button></div>
+    </div>
+    <script>
+        var start = false
+        str_ary = [
+            "Jived fox nymph grabs quick waltz",
+            "Glib jocks quiz nymph to vex dwarf",
+            "Sphinx of black quartz, judge my vow",
+            "How vexingly quick daft zebras jump!",
+            "The five boxing wizards jump quickly",
+            "Jackdaws love my big sphinx of quartz",
+            "Pack my box with five dozen liquor jugs",
+            "The quick brown fox jumps over the lazy dog"
+        ]
+        Math.ceil(Math.random() * 7)
+        str = str_ary[Math.ceil(Math.random() * 7)]
+        div = ''
+        for (i = 0; i < str.length; i++) {
+            div += `<span class="sng_txt">${str[i]}</span>`
+        }
+        document.getElementById("display_str1").innerHTML = div
+        count = 0
+        run = setInterval(function () {
+            if (document.getElementById("typing_field").value.length > 0) {
+                start = true
+            }
+            if (start) {
+                count++
+                txt = document.getElementById("typing_field").value
+                sng_txt = []
+                txt_len = txt.length - 1
+                if (txt_len < 0)
+                    txt_len = 0
+                index = txt_len
+                sng_txt = document.getElementsByClassName("sng_txt")
+                if (txt[index] == str[index]) {
+                    sng_txt[index].style.color = 'blue'
+                }
+                else {
+                    sng_txt[index].style.color = 'red'
+                }
+                if (txt.length == str.length) {
+                    clearInterval(run);
+                    wps = (str.split(" ").length / (count * 0.01))
+                    document.getElementById("result").innerHTML = Math.ceil(wps * 60)
+                    start = false
+                }
+            }
+        }, 10)
+
+
+
+    </script>
+</body>
+
+</html>
