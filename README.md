@@ -4,9 +4,11 @@
 In this project I used HTML, CSS, JS and other library. 
 You can share your ideas or give challenge to me also.
 
+
 ___
 
-####Challenges:
+
+#### Challenges:
 1. [May Calendar]
 1. [Typing Speed Check]
 1. [Page Subscriber Count]
@@ -14,7 +16,7 @@ ___
 1. [Guess Word]
 ___
 
-####Platform and Library
+#### Platform and Library
 1. Bootstrap
 1. JQuery
 1. Node Js
