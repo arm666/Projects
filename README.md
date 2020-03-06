@@ -1,12 +1,12 @@
-#<ins>Project X </ins>
+#Project X
 
-####<ins>This  is my 30 Days Challenge</ins> :
+####This  is my 30 Days Challenge :
 In this project I used HTML, CSS, JS and other library. 
 You can share your ideas or give challenge to me also.
 
 ___
 
-####<ins>Challenges</ins>:
+####Challenges:
 1. [May Calendar]
 1. [Typing Speed Check]
 1. [Page Subscriber Count]
@@ -14,7 +14,7 @@ ___
 1. [Guess Word]
 ___
 
-####<ins>Platform and Library</ins>
+####Platform and Library
 1. Bootstrap
 1. JQuery
 1. Node Js
