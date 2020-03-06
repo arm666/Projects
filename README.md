@@ -1,12 +1,15 @@
-#Project X
+# Project X
 
-####This  is my 30 Days Challenge :
-In this project I used HTML, CSS, JS and other library. 
+##### This is my 30 Days Challenge :
+In this project I have used HTML, CSS, JS and other library. 
 You can share your ideas or give challenge to me also.
 
+To see: 
+[https://arm666.github.io/Projects/](https://arm666.github.io/Projects/ "30 Days Challenge Link")
 ___
 
-####Challenges:
+
+#### Challenges:
 1. [May Calendar]
 1. [Typing Speed Check]
 1. [Page Subscriber Count]
@@ -14,7 +17,7 @@ ___
 1. [Guess Word]
 ___
 
-####Platform and Library
+#### Platform and Library
 1. Bootstrap
 1. JQuery
 1. Node Js
